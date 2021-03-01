@@ -11,18 +11,6 @@ namespace ApiInGames.Repositories
     {
         InGamesContext ctx = new InGamesContext();
 
-        public void Atualizar(int id, TipoUsuario tipoUsuario)
-        {
-            TipoUsuario tipoUsuarioAtualizado = new TipoUsuario();
-            tipoUsuarioAtualizado = BuscarPorId(id);
-
-            tipoUsuarioAtualizado.Titulo = tipoUsuario.Titulo;
-            tipoUsuarioAtualizado.Usuarios = tipoUsuario.Usuarios;
-
-            ctx.TipoUsuario.Update(tipoUsuarioAtualizado);
-            ctx.SaveChanges();
-        }
-
         public TipoUsuario BuscarPorId(int id)
         {
             return ctx.TipoUsuario.FirstOrDefault(e => e.IdTipoUsuario == id);

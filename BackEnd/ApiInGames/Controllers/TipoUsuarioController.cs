@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ApiInGames.Controllers
 {
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
@@ -22,6 +23,10 @@ namespace ApiInGames.Controllers
             _tipoUsuarioRepository = new TipoUsuarioRepository();
         }
 
+        /// <summary>
+        /// Listar todos os tipos de usuários
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -29,6 +34,11 @@ namespace ApiInGames.Controllers
 
         }
 
+        /// <summary>
+        /// Listar um tipo de usuário específico
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -36,6 +46,11 @@ namespace ApiInGames.Controllers
 
         }
 
+        /// <summary>
+        /// Cadastrar um novo tipo de usuário
+        /// </summary>
+        /// <param name="novoTipo"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(TipoUsuario novoTipo)
         {
@@ -43,17 +58,15 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Deletar um tipo de usuário
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             _tipoUsuarioRepository.Deletar(id);
-            return StatusCode(200);
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, TipoUsuario tipoUsuario)
-        {
-            _tipoUsuarioRepository.Atualizar(id, tipoUsuario);
             return StatusCode(200);
         }
     }

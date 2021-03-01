@@ -1,30 +1,41 @@
---Usar o banco de dados
-use BDInGames;
+--CONECTANDO COM O BANCO DE DADOS
+USE BDInGames;
+GO
 
---Listar todos os usuários  	
-select * from Usuarios;
+--LISTAR TODOS USUÁRIOS 	
+SELECT * FROM Usuarios;
+GO
 
---Listar todos os estúdios; 
-select * from Estudio;
+--LISTAR TODOS OS ESTÚDIOS
+SELECT * FROM Estudio;
+GO
 
---Listar todos os jogos; 
-select * from Jogo;
+--LISTAR TODOS OS JOGOS
+SELECT * FROM Jogo;
+GO
 
---Listar todos os jogos e seus respectivos estúdios;
+--LISTAR TODOS OS TIPOS DE USUÁRIOS
+SELECT * FROM TipoUsuario;
+GO
+
+--LISTAR TODOS OS JOGOS COM SEUS RESPECTIVOS ESTÚDIOS
 select Jogo.NomeJogo, Estudio.NomeEstudio from Jogo
 inner join Estudio on Estudio.IdEstudio = Jogo.IdEstudio;
+GO
 
---Buscar e trazer na lista todos os estúdios com os respectivos jogos. Obs.: Listar todos os estúdios mesmo que eles não contenham nenhum jogo de referência; 
-select Estudio.NomeEstudio , Jogo.NomeJogo from Estudio
-left join Jogo on Jogo.IdEstudio = Estudio.IdEstudio;
+--LISTAR TODOS OS ESTÚDIOS COM SEUS RESPECTIVOS JOGOS
+SELECT Estudio.NomeEstudio , Jogo.NomeJogo FROM Estudio
+LEFT JOIN Jogo ON Jogo.IdEstudio = Estudio.IdEstudio;
+GO
 
+--LISTAR UM JOGO ESPECÍFICO PELO SEU ID
+SELECT NomeJogo FROM Jogo
+WHERE IdJogo = 2;
+GO
 
-select * from Usuarios
---Buscar um usuário por email e senha; 
-select Email , Senha  from Usuarios 
-where Email like '%cliente@cliente.com%' and Senha like '%cliente%';
+--LISTAR UM USUÁRIO ATRAVÉZ DO SEU EMAIL E SENHA 
+SELECT Email , Senha  FROM Usuarios 
+WHERE Email LIKE '%cliente@cliente.com%' AND Senha LIKE '%cliente%';
+GO
 
---Buscar um jogo por IdJogo;
-select NomeJogo from Jogo
-where IdJogo = 2;
 

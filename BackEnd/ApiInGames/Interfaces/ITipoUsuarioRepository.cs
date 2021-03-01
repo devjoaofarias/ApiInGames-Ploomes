@@ -16,6 +16,5 @@ namespace ApiInGames.Interfaces
 
         void Deletar(int id);
 
-        void Atualizar(int id, TipoUsuario tipoUsuario);
     }
 }

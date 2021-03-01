@@ -28,3 +28,5 @@ C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\
 C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Debug\netcoreapp2.1\ApiInGames.dll
 C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Debug\netcoreapp2.1\ApiInGames.pdb
 C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Debug\netcoreapp2.1\ApiInGames.genruntimeconfig.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\bin\Debug\netcoreapp2.1\ApiInGames.xml
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Debug\netcoreapp2.1\ApiInGames.xml

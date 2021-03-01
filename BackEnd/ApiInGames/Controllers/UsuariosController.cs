@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApiInGames.Controllers
 {
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
@@ -23,6 +24,10 @@ namespace ApiInGames.Controllers
             _usuariosRepository = new UsuariosRepository();
         }
 
+        /// <summary>
+        /// Listar todos os usuários
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -30,6 +35,11 @@ namespace ApiInGames.Controllers
 
         }
 
+        /// <summary>
+        /// Listar um usuário específico
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -37,6 +47,11 @@ namespace ApiInGames.Controllers
 
         }
 
+        /// <summary>
+        /// Cadastrar um novo usuário
+        /// </summary>
+        /// <param name="novoUsuario"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(Usuarios novoUsuario)
         {
@@ -44,6 +59,11 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Deletar um usuário
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
@@ -52,6 +72,12 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Editar um usuário
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="usuarios"></param>
+        /// <returns></returns>
         [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Usuarios usuarios)

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApiInGames.Controllers
 {
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
@@ -22,6 +23,10 @@ namespace ApiInGames.Controllers
             _estudioRepository = new EstudioRepository();
         }
 
+        /// <summary>
+        /// Listar todos os estúdios
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -29,6 +34,11 @@ namespace ApiInGames.Controllers
 
         }
 
+        /// <summary>
+        /// Listar um estúdio específico
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -36,6 +46,11 @@ namespace ApiInGames.Controllers
 
         }
 
+        /// <summary>
+        /// Cadastrar um novo estúdio
+        /// </summary>
+        /// <param name="novoEstudio"></param>
+        /// <returns></returns>
         [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Estudio novoEstudio)
@@ -44,6 +59,11 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Deletar um estúdio
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
@@ -52,6 +72,12 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
+        /// <summary>
+        /// Editar um estúdio
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="estudio"></param>
+        /// <returns></returns>
         [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Estudio estudio)
@@ -60,7 +86,10 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
-
+        /// <summary>
+        /// Listar os estúdios e seus respectivos jogos
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("Jogo")]
         public IActionResult GetJogos()
         {

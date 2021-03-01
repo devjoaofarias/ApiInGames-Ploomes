@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace ApiInGames.Controllers
 {
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]

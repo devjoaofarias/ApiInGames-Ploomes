@@ -1,40 +1,39 @@
---Criar um database
-create database BDInGames;
+--CRIAR O BANCO DE DADOS
+CREATE DATABASE BDInGames;
+GO
 
---Usar o banco de dados
-use BDInGames;
+--CONECTANDO COM O BANCO DE DADOS
+USE BDInGames;
+GO
 
---Criação das tabelas 
-create table Estudio(
-	IdEstudio int primary key identity,
-	NomeEstudio varchar(255) not null unique
+--CRIANDO AS TABELAS 
+CREATE TABLE Estudio(
+	IdEstudio INT PRIMARY KEY IDENTITY,
+	NomeEstudio VARCHAR(255) NOT NULL UNIQUE
 );
+GO
 
-create table Jogo(
-	IdJogo int primary key identity, 
-	NomeJogo varchar(255) not null unique,
-	Descricao varchar(500) not null,
-	DataDeLancamento date not null,
-	Valor decimal not null,
-	IdEstudio int foreign key references Estudio (IdEstudio) 
+CREATE TABLE Jogo(
+	IdJogo INT PRIMARY KEY IDENTITY, 
+	NomeJogo VARCHAR(255) NOT NULL UNIQUE,
+	Descricao VARCHAR(500) NOT NULL,
+	DataDeLancamento DATE NOT NULL,
+	Valor DECIMAL NOT NULL,
+	IdEstudio INT FOREIGN KEY REFERENCES Estudio (IdEstudio) 
 );
+GO
 
-select IdJogo, NomeJogo, Descricao, DataDeLancamento, Valor, IdEstudio from Jogo
-
-create table TipoUsuario(
-	IdTipoUsuario int primary key identity,
-	Titulo varchar(255) not null
+CREATE TABLE TipoUsuario(
+	IdTipoUsuario INT PRIMARY KEY IDENTITY,
+	Titulo VARCHAR(255) NOT NULL
 );
-select IdTipoUsuario, Titulo from TipoUsuario
+GO
 
-create table Usuarios(
-	IdUsuario int primary key identity,
-	Email varchar(255) not null unique,
-	Senha varchar(255) not null,
-	IdTipoUsuario int foreign key references TipoUsuario( IdTipoUsuario)
+CREATE TABLE Usuarios(
+	IdUsuario INT PRIMARY KEY IDENTITY,
+	Email VARCHAR(255) NOT NULL UNIQUE,
+	Senha VARCHAR(255) NOT NULL,
+	IdTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuario( IdTipoUsuario)
 );
-
-	SELECT Usuarios.IdUsuario, Usuarios.Email, Usuarios.Senha, TipoUsuario.IdTipoUsuario from Usuarios
-	inner join TipoUsuario on Usuarios.IdTipoUsuario = TipoUsuario.IdTipoUsuario;
-
+GO
 
