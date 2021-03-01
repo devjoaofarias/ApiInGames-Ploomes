@@ -17,6 +17,7 @@ namespace ApiInGames.Repositories
             Jogo jogoAtualizado = new Jogo();
             jogoAtualizado = BuscarPorId(id);
 
+            jogoAtualizado.NomeJogo = jogo.NomeJogo;
             jogoAtualizado.DataDeLancamento = jogo.DataDeLancamento;
             jogoAtualizado.Descricao = jogo.Descricao;
             jogoAtualizado.IdEstudio = jogo.IdEstudio;

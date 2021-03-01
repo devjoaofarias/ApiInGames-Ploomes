@@ -18,6 +18,8 @@ namespace ApiInGames.Interfaces
 
         void Atualizar(int id, Usuarios usuarios);
 
+        Usuarios BuscarPorEmailSenha(string email, string senha);
+
         List<Usuarios> ListarComTipoUsuarios();
     }
 }

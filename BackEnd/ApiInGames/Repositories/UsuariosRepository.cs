@@ -54,6 +54,12 @@ namespace ApiInGames.Repositories
         {
             return ctx.Usuarios.Include(e => e.IdTipoUsuarioNavigation).ToList();
         }
+
+        public Usuarios BuscarPorEmailSenha(string email, string senha)
+        {
+            Usuarios usuarios = ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+            return usuarios;
+        }
     }
 }
 

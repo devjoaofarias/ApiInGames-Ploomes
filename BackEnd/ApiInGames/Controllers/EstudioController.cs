@@ -1,6 +1,7 @@
 ﻿using ApiInGames.Domains;
 using ApiInGames.Interfaces;
 using ApiInGames.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace ApiInGames.Controllers
 
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Estudio novoEstudio)
         {
@@ -42,6 +44,7 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -49,6 +52,7 @@ namespace ApiInGames.Controllers
             return StatusCode(200);
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Estudio estudio)
         {
