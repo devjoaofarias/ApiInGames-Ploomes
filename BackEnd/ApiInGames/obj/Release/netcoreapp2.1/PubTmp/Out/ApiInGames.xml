@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiInGames</name>
+    </assembly>
+    <members>
+        <member name="M:ApiInGames.Controllers.EstudioController.Get">
+            <summary>
+            Listar todos os estúdios
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.EstudioController.GetById(System.Int32)">
+            <summary>
+            Listar um estúdio específico
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.EstudioController.Post(ApiInGames.Domains.Estudio)">
+            <summary>
+            Cadastrar um novo estúdio
+            </summary>
+            <param name="novoEstudio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.EstudioController.Delete(System.Int32)">
+            <summary>
+            Deletar um estúdio
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.EstudioController.Atualizar(System.Int32,ApiInGames.Domains.Estudio)">
+            <summary>
+            Editar um estúdio
+            </summary>
+            <param name="id"></param>
+            <param name="estudio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.EstudioController.GetJogos">
+            <summary>
+            Listar os estúdios e seus respectivos jogos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.JogoController.Get">
+            <summary>
+            Listar todos os jogos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.JogoController.GetById(System.Int32)">
+            <summary>
+            Listar um jogo específico
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.JogoController.Post(ApiInGames.Domains.Jogo)">
+            <summary>
+            Cadastrar um jogo
+            </summary>
+            <param name="novoJogo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.JogoController.Delete(System.Int32)">
+            <summary>
+            Deletar um jogo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.JogoController.Atualizar(System.Int32,ApiInGames.Domains.Jogo)">
+            <summary>
+            Editar um jogo
+            </summary>
+            <param name="id"></param>
+            <param name="jogo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.JogoController.GetEstudios">
+            <summary>
+            Listar todos os jogos e seus respectivos estúdios
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.LoginController.Post(ApiInGames.ViewModels.LoginViewModel)">
+            <summary>
+            Login
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.TipoUsuarioController.Get">
+            <summary>
+            Listar todos os tipos de usuários
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.TipoUsuarioController.GetById(System.Int32)">
+            <summary>
+            Listar um tipo de usuário específico
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.TipoUsuarioController.Post(ApiInGames.Domains.TipoUsuario)">
+            <summary>
+            Cadastrar um novo tipo de usuário
+            </summary>
+            <param name="novoTipo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.TipoUsuarioController.Delete(System.Int32)">
+            <summary>
+            Deletar um tipo de usuário
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.UsuariosController.Get">
+            <summary>
+            Listar todos os usuários
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.UsuariosController.GetById(System.Int32)">
+            <summary>
+            Listar um usuário específico
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.UsuariosController.Post(ApiInGames.Domains.Usuarios)">
+            <summary>
+            Cadastrar um novo usuário
+            </summary>
+            <param name="novoUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Deletar um usuário
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiInGames.Controllers.UsuariosController.Atualizar(System.Int32,ApiInGames.Domains.Usuarios)">
+            <summary>
+            Editar um usuário
+            </summary>
+            <param name="id"></param>
+            <param name="usuarios"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

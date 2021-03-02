@@ -1,0 +1,17 @@
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\bin\Release\netcoreapp2.1\ApiInGames.deps.json
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\bin\Release\netcoreapp2.1\ApiInGames.runtimeconfig.json
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\bin\Release\netcoreapp2.1\ApiInGames.runtimeconfig.dev.json
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\bin\Release\netcoreapp2.1\ApiInGames.dll
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\bin\Release\netcoreapp2.1\ApiInGames.pdb
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\bin\Release\netcoreapp2.1\ApiInGames.xml
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.csprojAssemblyReference.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.AssemblyInfoInputs.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.AssemblyInfo.cs
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.csproj.CoreCompileInputs.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.RazorAssemblyInfo.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.RazorAssemblyInfo.cs
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.RazorTargetAssemblyInfo.cache
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.dll
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.xml
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.pdb
+C:\Users\joaos\OneDrive\Área de Trabalho\ApiInGames-Ploomes\BackEnd\ApiInGames\obj\Release\netcoreapp2.1\ApiInGames.genruntimeconfig.cache

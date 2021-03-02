@@ -24,7 +24,7 @@ namespace ApiInGames.Domains
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-4F680M8\\SQLEXPRESS; Initial Catalog=BDInGames;integrated security=true;");
+                optionsBuilder.UseSqlServer("Data Source=devjoaosantos.database.windows.net; Initial Catalog=BDInGames;user ID=devjoaosantos; password=07102728Sf;");
             }
         }
 
