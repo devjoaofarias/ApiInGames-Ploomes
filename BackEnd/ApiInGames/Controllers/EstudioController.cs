@@ -12,7 +12,7 @@ namespace ApiInGames.Controllers
 {
 
     [Produces("application/json")]
-    //[Route("api/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class EstudioController : ControllerBase
     {
@@ -27,9 +27,7 @@ namespace ApiInGames.Controllers
         /// Listar todos os estúdios
         /// </summary>
         /// <returns></returns>
-        
         [HttpGet]
-        [Route("/")]
         public IActionResult Get()
         {
             return Ok(_estudioRepository.Listar());

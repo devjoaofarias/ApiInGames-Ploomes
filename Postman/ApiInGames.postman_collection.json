@@ -1,0 +1,601 @@
+{
+	"info": {
+		"_postman_id": "ba31ab4d-a668-40c1-a2a2-61f5d507f9fa",
+		"name": "ApiInGames",
+		"description": "API criada utilizando ASPNET + SQLServer, para o processo seletivo da empresa PLOOMES!",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EndPoints - Jogo",
+			"item": [
+				{
+					"name": "Listar os jogos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Jogo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Jogo"
+							]
+						},
+						"description": "Método para listar todos os jogos cadastrados no banco de dados!"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar um jogo  específico atravéz do seu ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Jogo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Jogo",
+								"1"
+							]
+						},
+						"description": "Para buscar um jogo pelo seu ID, é necessario informar o ID referente ao jogo na URL!"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar um jogo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTc3MDkwLCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.E7zpmVnfyBf3LDgYBjivqDGpsc2oa-S5_cFvpsPXhgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nomeJogo\": \"COD MWM\",\r\n        \"descricao\": \"Ação + Battle Royale\",\r\n        \"dataDeLancamento\": \"2020-05-21\",\r\n        \"valor\": 150,\r\n        \"idEstudio\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Jogo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Jogo"
+							]
+						},
+						"description": "Para fazer o cadastro de um jogo no banco de dados é necessário realizar antes um login como administrador seguindo os seguintes passos:\n1 - clique no endpoint LOGIN, em body coloque o email e senha (admin@admin.com / admin)\n2 - Copie o token que apareceu como resposta (não copie as aspas)\n3 - Volte para o endpoint de cadastrar um jogo, clique na aba AUTHORIZATION, no select escolha BEARER TOKEN e cole seu token no input\n4 - Em body insira o nome, data de lançamento, valor e estúdio do jogo para realizar o cadastro!"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar um jogo pelo seu ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTc3MDkwLCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.E7zpmVnfyBf3LDgYBjivqDGpsc2oa-S5_cFvpsPXhgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nomeJogo\": \"GTA 5\",\r\n        \"descricao\": \"Jogo de ação com mundo aberto\",\r\n        \"dataDeLancamento\": \"2018-10-26T00:00:00\",\r\n        \"valor\": 300.0,\r\n        \"idEstudio\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Jogo/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Jogo",
+								"2"
+							]
+						},
+						"description": "Para fazer a edição de um jogo no banco de dados é necessário realizar antes um login como administrador seguindo os seguintes passos: 1 - clique no endpoint LOGIN, em body coloque o email e senha (admin@admin.com / admin) 2 - Copie o token que apareceu como resposta (não copie as aspas) 3 - Volte para o endpoint de editar um jogo, clique na aba AUTHORIZATION, no select escolha BEARER TOKEN e cole seu token no input 4 - Em body insira o nome, data de lançamento, valor e estúdio do jogo atualizados para fazer a edição!"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar um jogo pelo ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTc3MDkwLCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.E7zpmVnfyBf3LDgYBjivqDGpsc2oa-S5_cFvpsPXhgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Jogo/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Jogo",
+								"2"
+							]
+						},
+						"description": "Para deletar um jogo no banco de dados é necessário realizar antes um login como administrador seguindo os seguintes passos: 1 - clique no endpoint LOGIN, em body coloque o email e senha (admin@admin.com / admin) 2 - Copie o token que apareceu como resposta (não copie as aspas) 3 - Volte para o endpoint de deletar um jogo, clique na aba AUTHORIZATION, no select escolha BEARER TOKEN e cole seu token no input 4 - Na URL indique o ID do jogo a ser deletado!\n\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EdnPoints - Usuário",
+			"item": [
+				{
+					"name": "Listar os usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						},
+						"description": "Método para listar todos os usuários cadastrados no banco!"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar um usuário específico atravéz do seu ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"1"
+							]
+						},
+						"description": "Para buscar um usuário pelo seu ID, é necessário informar o ID do usuário desejado na URL"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar um usuário",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTcxMjE0LCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.DTM6Jgi5Ceth-TGDJdVdeMtbD_zZ50uLVRyRgrv-1RM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"cadastrando@cadastrando.com\",\r\n    \"senha\": \"cadastrado\",\r\n    \"idTipoUsuario\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						},
+						"description": "Para cadastrar um usuário não é necessário ser um administrador, logo, não necessita realizar um login!"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar um usuário pelo seu ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTc3MDkwLCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.E7zpmVnfyBf3LDgYBjivqDGpsc2oa-S5_cFvpsPXhgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"alterando@alterando.com\",\r\n        \"senha\": \"alterado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"2"
+							]
+						},
+						"description": "Para fazer a edição de um usuário no banco de dados é necessário realizar antes um login como administrador seguindo os seguintes passos: 1 - clique no endpoint LOGIN, em body coloque o email e senha (admin@admin.com / admin) 2 - Copie o token que apareceu como resposta (não copie as aspas) 3 - Volte para o endpoint de editar o usuário, clique na aba AUTHORIZATION, no select escolha BEARER TOKEN e cole seu token no input 4 - Em body insira o email e a senha atualizados para realizar a edição!\n\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar um usuário pelo ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTc3MDkwLCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.E7zpmVnfyBf3LDgYBjivqDGpsc2oa-S5_cFvpsPXhgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"6"
+							]
+						},
+						"description": "Para deletar um usuário no banco de dados é necessário realizar antes um login como administrador seguindo os seguintes passos: 1 - clique no endpoint LOGIN, em body coloque o email e senha (admin@admin.com / admin) 2 - Copie o token que apareceu como resposta (não copie as aspas) 3 - Volte para o endpoint de deletar um usuário, clique na aba AUTHORIZATION, no select escolha BEARER TOKEN e cole seu token no input 4 - Na URL indique o ID do usuário a ser deletado!\n\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EndPoints - Estudio",
+			"item": [
+				{
+					"name": "Listar os estúdios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Estudio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Estudio"
+							]
+						},
+						"description": "Método para listar todos os estúdios cadastrados no banco de dados!"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar um estúdio especifico atravéz do seu ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Estudio/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Estudio",
+								"1"
+							]
+						},
+						"description": "Método para listar apenas um estúdio especifico, é necessario que indque seu ID na URL!"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar os estúdios e seus respectivos jogos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Estudio/Jogo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Estudio",
+								"Jogo"
+							]
+						},
+						"description": "Método para listar todos estúdios e seus jogos!"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar um estúdio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTc3MDkwLCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.E7zpmVnfyBf3LDgYBjivqDGpsc2oa-S5_cFvpsPXhgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"NomeEstudio\" : \"Teste\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Estudio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Estudio"
+							]
+						},
+						"description": "Para fazer o cadastro de um estúdio no banco de dados é necessário realizar antes um login como administrador seguindo os seguintes passos:\n1 - clique no endpoint LOGIN, em body coloque o email e senha (admin@admin.com / admin);\n2 - Copie o token que apareceu como resposta (não copie as aspas);\n3 - Volte para o endpoint de cadastrar um jogo, clique na aba AUTHORIZATION, no select escolha BEARER TOKEN e cole seu token no input;\n4 - Em body insira o nome do estúdio para realizar o cadastro!"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar um estúdio pelo seu ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjE0NTc3MDkwLCJpc3MiOiJBcGlJbkdhbWVzIiwiYXVkIjoiQXBpSW5HYW1lcyJ9.E7zpmVnfyBf3LDgYBjivqDGpsc2oa-S5_cFvpsPXhgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nomeEstudio\": \"Sony\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Estudio/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Estudio",
+								"2"
+							]
+						},
+						"description": "Para fazer a edição de um estúdio no banco de dados é necessário realizar antes um login como administrador seguindo os seguintes passos: 1 - clique no endpoint LOGIN, em body coloque o email e senha (admin@admin.com / admin) 2 - Copie o token que apareceu como resposta (não copie as aspas) 3 - Volte para o endpoint de editar um estúdio, clique na aba AUTHORIZATION, no select escolha BEARER TOKEN e cole seu token no input 4 - Em body insira o novo nome do estúdio para fazer a edição!"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzMjkwMzEyLCJpc3MiOiJJbkxvY2suV2ViQXBpIiwiYXVkIjoiSW5Mb2NrLldlYkFwaSJ9.kVULWRa1Lggf0ElSeAvEscAGpNR318OHP6rJ-Gb-1mk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Email\" : \"admin@admin.com\",\r\n        \"Senha\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Método para realizar o login: Insira o email e a senha o administrador no BODY, assim será retornado um token de autorização para os métodos que precisam dele!"
+			},
+			"response": []
+		}
+	]
+}

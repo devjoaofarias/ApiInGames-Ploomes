@@ -24,6 +24,7 @@ namespace ApiInGames.Domains
         {
             if (!optionsBuilder.IsConfigured)
             {
+                //Conectado com o banco de dados que está hospedado no azure
                 optionsBuilder.UseSqlServer("Data Source=apiingames.database.windows.net; Initial Catalog=BDInGames;user ID=devjoaosantos; password=07102728Sf;");
             }
         }
